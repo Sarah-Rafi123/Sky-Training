@@ -1,0 +1,300 @@
+/* Sky Education Login Screen Styles */
+.sky-login-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Left Panel */
+.sky-login-left {
+  flex: 1;
+  background: linear-gradient(135deg, #7dd3fc 0%, #3b82f6 50%, #6366f1 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background circles */
+.sky-bg-circle-1 {
+  position: absolute;
+  bottom: -10rem;
+  left: -8rem;
+  width: 24rem;
+  height: 24rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.sky-bg-circle-2 {
+  position: absolute;
+  bottom: -6rem;
+  left: -6rem;
+  width: 20rem;
+  height: 20rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+
+/* Logo Section */
+.sky-logo-section {
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.sky-logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.sky-logo-icon {
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+}
+
+.sky-logo-inner {
+  width: 2rem;
+  height: 2rem;
+  background: #3b82f6;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sky-logo-shape {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: white;
+  border-radius: 0.125rem;
+  transform: rotate(45deg);
+}
+
+.sky-logo-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.sky-logo-text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.sky-logo-image {
+  width: 12rem;
+  height: auto;
+  object-fit: contain;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.sky-tagline {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+/* Content Section */
+.sky-content {
+  max-width: 28rem;
+  position: relative;
+  z-index: 10;
+}
+
+.sky-content h2 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.sky-read-more-btn {
+  background: white;
+  color: #3b82f6;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sky-read-more-btn:hover {
+  background: #f9fafb;
+  transform: translateY(-1px);
+}
+
+/* Right Panel */
+.sky-login-right {
+  flex: 1;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.sky-login-form-container {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.sky-login-header {
+  margin-bottom: 2rem;
+}
+
+.sky-login-header h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.sky-login-header p {
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Form Styles */
+.sky-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sky-form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 9999px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.sky-form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.sky-form-input::placeholder {
+  color: #9ca3af;
+}
+
+.sky-login-btn {
+  width: 100%;
+  background: #3b82f6;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.sky-login-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* Form Links */
+.sky-form-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.sky-link {
+  color: #6b7280;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sky-link:hover {
+  color: #374151;
+}
+
+/* Signup link styles */
+.sky-signup-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.sky-signup-link {
+  color: #3b82f6;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.sky-signup-link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sky-login-container {
+    flex-direction: column;
+  }
+  
+  .sky-login-left {
+    padding: 2rem;
+    min-height: 40vh;
+  }
+  
+  .sky-login-right {
+    padding: 2rem;
+  }
+  
+  .sky-bg-circle-1,
+  .sky-bg-circle-2,
+  .sky-bg-circle-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .sky-login-left,
+  .sky-login-right {
+    padding: 1.5rem;
+  }
+  
+  .sky-logo-text h1 {
+    font-size: 2rem;
+  }
+  
+  .sky-login-header h2 {
+    font-size: 1.5rem;
+  }
+}

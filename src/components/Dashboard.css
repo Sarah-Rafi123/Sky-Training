@@ -1,0 +1,936 @@
+/* Sky Education Dashboard Styles */
+.sky-dashboard {
+  min-height: 100vh;
+  background: #f9fafb;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Header */
+.sky-header {
+  background: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sky-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.sky-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.sky-header-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.sky-header-logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #3b82f6;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+}
+
+.sky-header-logo-shape {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sky-header-logo-inner {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #3b82f6;
+  border-radius: 0.125rem;
+  transform: rotate(45deg);
+}
+
+.sky-header-logo-text h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3b82f6;
+  margin: 0;
+}
+
+.sky-header-logo-text p {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.sky-header-logo-image {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.sky-header-tagline {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Search Bar */
+.sky-search-container {
+  flex: 1;
+  max-width: 28rem;
+  margin: 0 2rem;
+}
+
+.sky-search-wrapper {
+  position: relative;
+}
+
+.sky-search-input {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.sky-search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.sky-search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Main Layout */
+.sky-main-layout {
+  display: flex;
+}
+
+/* Sidebar */
+.sky-sidebar {
+  width: 16rem;
+  background: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 4rem);
+}
+
+.sky-sidebar-content {
+  padding: 1.5rem;
+}
+
+/* Sidebar Logo */
+.sky-sidebar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 2rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.sky-sidebar-logo-image {
+  width: 8rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.sky-sidebar-section {
+  margin-bottom: 2rem;
+}
+
+.sky-sidebar-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.sky-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sky-sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  color: #6b7280;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sky-sidebar-link.active {
+  color: #3b82f6;
+  background: #eff6ff;
+}
+
+.sky-sidebar-link:hover {
+  background: #f3f4f6;
+}
+
+.sky-sidebar-link.logout {
+  color: #ef4444;
+}
+
+.sky-sidebar-link.logout:hover {
+  background: #fef2f2;
+}
+
+.sky-sidebar-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+/* Main Content */
+.sky-main-content {
+  flex: 1;
+  padding: 1.5rem;
+  background: #f9fafb;
+}
+
+/* Welcome Banner */
+.sky-welcome-banner {
+  background: linear-gradient(135deg, #60a5fa 0%, #8b5cf6 100%);
+  border-radius: 1rem;
+  padding: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.sky-welcome-content {
+  position: relative;
+  z-index: 10;
+}
+
+.sky-welcome-subtitle {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sky-welcome-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.sky-welcome-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.sky-btn-primary {
+  background: white;
+  color: #3b82f6;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.sky-btn-primary:hover {
+  background: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.sky-btn-secondary {
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.sky-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sky-welcome-decoration {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6rem;
+  height: 6rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sky-welcome-star {
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  border-radius: 50%;
+}
+
+/* Stats Grid */
+.sky-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sky-stat-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  position: relative;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.sky-stat-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.sky-stat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.sky-stat-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.sky-stat-icon.blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.sky-stat-icon.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.sky-stat-icon.red {
+  background: #fecaca;
+  color: #dc2626;
+}
+
+.sky-stat-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.sky-stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.sky-stat-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Continue Course Section */
+.sky-section {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+}
+
+.sky-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.sky-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.sky-section-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sky-control-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #9ca3af;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sky-control-btn:hover {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Course Cards */
+.sky-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.sky-course-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.sky-course-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.sky-course-image {
+  width: 100%;
+  height: 8rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sky-course-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sky-course-image-icon {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sky-course-image-inner {
+  width: 2rem;
+  height: 2rem;
+  background: white;
+  border-radius: 50%;
+}
+
+.sky-course-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #2563eb;
+  background: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.sky-course-menu {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sky-course-content {
+  padding: 1rem;
+}
+
+.sky-course-title {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 3.6rem;
+}
+
+.sky-course-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.sky-course-qualification {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.sky-course-qualification:contains("QUALIFI") {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+/* Different colors for different qualifications */
+.sky-course-card:nth-child(1) .sky-course-qualification {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.sky-course-card:nth-child(2) .sky-course-qualification {
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+.sky-course-card:nth-child(3) .sky-course-qualification {
+  color: #16a34a;
+  background: #f0fdf4;
+}
+
+.sky-course-duration {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.sky-progress-section {
+  margin-bottom: 0.75rem;
+}
+
+.sky-progress-bar-container {
+  width: 100%;
+  height: 0.5rem;
+  background: #e5e7eb;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.sky-progress-bar {
+  height: 100%;
+  background: #3b82f6;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+/* Mentor Section */
+.sky-mentor-table {
+  width: 100%;
+}
+
+.sky-mentor-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.sky-mentor-table-header h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.sky-see-all-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.sky-see-all-link:hover {
+  color: #2563eb;
+}
+
+.sky-table-headers {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  font-weight: 500;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.sky-table-header-item {
+  flex: 1;
+}
+
+.sky-table-header-item:first-child {
+  flex: 2;
+}
+
+.sky-table-header-item:last-child {
+  flex: 0.5;
+  text-align: right;
+}
+
+.sky-mentor-row {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.sky-mentor-row:hover {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  margin: 0 -0.5rem;
+  padding: 1rem 0.5rem;
+}
+
+.sky-mentor-info {
+  flex: 2;
+  display: flex;
+  align-items: center;
+}
+
+.sky-mentor-avatar {
+  width: 2rem;
+  height: 2rem;
+  background: #dbeafe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  color: #2563eb;
+}
+
+.sky-mentor-details h4 {
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0 0 0.25rem 0;
+  font-size: 0.875rem;
+}
+
+.sky-mentor-details p {
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.sky-mentor-category {
+  flex: 1;
+}
+
+.sky-mentor-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+
+.sky-mentor-badge.qualifi {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.sky-mentor-badge.sea {
+  color: #d97706;
+  background: #fef3c7;
+}
+
+.sky-mentor-title {
+  flex: 1;
+  color: #1f2937;
+  font-size: 0.875rem;
+}
+
+.sky-mentor-status {
+  flex: 0.5;
+  text-align: right;
+}
+
+.sky-status-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.sky-status-badge.complete {
+  color: #16a34a;
+  background: #dcfce7;
+}
+
+.sky-status-badge.incomplete {
+  color: #dc2626;
+  background: #fecaca;
+}
+
+/* Right Sidebar */
+.sky-right-sidebar {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  height: fit-content;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.sky-completed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.sky-completed-header h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.sky-completed-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.sky-completed-item:hover {
+  background-color: #f9fafb;
+}
+
+.sky-completed-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #dbeafe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  color: #2563eb;
+}
+
+.sky-completed-info h4 {
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0 0 0.25rem 0;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.sky-completed-info p {
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.sky-completed-score {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  background: #3b82f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.sky-see-all-center {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.sky-see-all-icon {
+  width: 4rem;
+  height: 4rem;
+  background: #f3f4f6;
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+}
+
+.sky-see-all-btn {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.sky-see-all-btn:hover {
+  color: #2563eb;
+}
+
+/* Bottom Grid Layout */
+.sky-bottom-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .sky-courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .sky-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sky-main-layout {
+    flex-direction: column;
+  }
+  
+  .sky-sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+  
+  .sky-sidebar-content {
+    padding: 1rem;
+  }
+  
+  .sky-sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 0.5rem;
+  }
+  
+  .sky-sidebar-link {
+    white-space: nowrap;
+  }
+  
+  .sky-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .sky-courses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sky-search-container {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sky-header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .sky-search-container {
+    max-width: none;
+    margin: 0;
+  }
+  
+  .sky-main-content {
+    padding: 1rem;
+  }
+  
+  .sky-welcome-banner {
+    padding: 1.5rem;
+  }
+  
+  .sky-welcome-title {
+    font-size: 1.5rem;
+  }
+  
+  .sky-welcome-decoration {
+    display: none;
+  }
+  
+  .sky-welcome-actions {
+    flex-direction: column;
+  }
+  
+  .sky-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sky-section {
+    padding: 1rem;
+  }
+}

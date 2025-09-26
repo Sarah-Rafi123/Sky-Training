@@ -1,0 +1,565 @@
+/* SkillUpZone Main Dashboard Styles */
+.skillup-main-container {
+  min-height: 100vh;
+  background: #f9fafb;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Header */
+.skillup-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.skillup-header-content {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.skillup-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.skillup-logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.skillup-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.skillup-logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  color: white;
+}
+
+.skillup-logo-text h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.skillup-logo-text p {
+  font-size: 0.75rem;
+  color: #bfdbfe;
+  margin: 0;
+}
+
+.skillup-tagline-header {
+  font-size: 0.875rem;
+  color: #e5e7eb;
+  font-style: italic;
+}
+
+/* Navigation */
+.skillup-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.skillup-nav-btn {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #bfdbfe;
+  background: transparent;
+}
+
+.skillup-nav-btn.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.skillup-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* User Menu */
+.skillup-user-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.skillup-notification-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: white;
+}
+
+.skillup-notification-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.skillup-user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skillup-user-avatar {
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.skillup-username {
+  font-size: 0.875rem;
+  color: white;
+}
+
+/* Main Content */
+.skillup-main {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Welcome Banner */
+.skillup-welcome-banner {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  border-radius: 1rem;
+  padding: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.skillup-welcome-content {
+  position: relative;
+  z-index: 10;
+}
+
+.skillup-welcome-text {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.skillup-welcome-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.skillup-welcome-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.skillup-btn-primary {
+  background: white;
+  color: #3b82f6;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skillup-btn-primary:hover {
+  background: #f3f4f6;
+}
+
+.skillup-btn-secondary {
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skillup-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.skillup-welcome-icon {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6rem;
+  height: 6rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skillup-welcome-icon-inner {
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  border-radius: 50%;
+}
+
+/* Stats Grid */
+.skillup-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.skillup-stat-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.skillup-stat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skillup-stat-icon {
+  padding: 0.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skillup-stat-icon.blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.skillup-stat-icon.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.skillup-stat-icon.yellow {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.skillup-stat-icon.purple {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+
+.skillup-stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.skillup-stat-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* Course Cards */
+.skillup-section {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+}
+
+.skillup-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.skillup-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.skillup-nav-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.skillup-nav-control {
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #6b7280;
+  transition: all 0.3s ease;
+}
+
+.skillup-nav-control:hover {
+  background: #f3f4f6;
+}
+
+.skillup-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.skillup-course-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skillup-course-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.skillup-course-header {
+  display: flex;
+  align-items: center;
+  justify-content: between;
+  margin-bottom: 0.75rem;
+}
+
+.skillup-course-category {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #2563eb;
+  background: #dbeafe;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.skillup-course-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.skillup-star {
+  width: 1rem;
+  height: 1rem;
+  color: #fbbf24;
+}
+
+.skillup-rating-text {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.skillup-course-title {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.skillup-course-instructor {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.skillup-course-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.skillup-progress-section {
+  margin-bottom: 0.75rem;
+}
+
+.skillup-progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.skillup-progress-bar {
+  width: 100%;
+  background: #e5e7eb;
+  border-radius: 9999px;
+  height: 0.5rem;
+  overflow: hidden;
+}
+
+.skillup-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.skillup-course-btn {
+  width: 100%;
+  background: #3b82f6;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.skillup-course-btn:hover {
+  background: #2563eb;
+}
+
+/* Bottom Grid */
+.skillup-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.skillup-achievement-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.skillup-achievement-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.skillup-achievement-text h4 {
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0 0 0.25rem 0;
+}
+
+.skillup-achievement-text p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.skillup-event-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.skillup-event-info h4 {
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0 0 0.25rem 0;
+}
+
+.skillup-event-info p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.skillup-event-btn {
+  color: #3b82f6;
+  background: transparent;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.skillup-event-btn:hover {
+  color: #2563eb;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skillup-nav {
+    display: none;
+  }
+  
+  .skillup-welcome-icon {
+    display: none;
+  }
+  
+  .skillup-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .skillup-main {
+    padding: 1rem;
+  }
+  
+  .skillup-welcome-banner {
+    padding: 1.5rem;
+  }
+  
+  .skillup-welcome-title {
+    font-size: 1.5rem;
+  }
+  
+  .skillup-welcome-actions {
+    flex-direction: column;
+  }
+  
+  .skillup-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .skillup-courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
