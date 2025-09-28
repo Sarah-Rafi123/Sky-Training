@@ -3,6 +3,7 @@ import Courses from './Courses'
 import Settings from './Settings'
 import TestScreen from './TestScreen'
 import ResultsScreen from './ResultsScreen'
+import CourseDetail from './CourseDetail'
 import './Dashboard.css'
 import skyEducationLogo from '../assets/skyEducationLogo.png'
 
@@ -11,11 +12,12 @@ export default function Dashboard({ onLogout }) {
   const courses = [
     {
       id: 1,
-      title: "Level 5 Certificate In Aesthetics Practice",
+      title: "Level 2 SQA: Professional Taxi & Private Hire Driver (Wales)",
       lesson: "LESSON 1",
-      qualification: "QUALIFI",
+      qualification: "SQA",
       duration: "2-30hr",
-      progress: 75
+      progress: 75,
+      desc: "The Level 2 SQA Professional Taxi & Private Hire Driver course introduces aspiring drivers to the comprehensive professional standards required in the passenger transport industry, with particular focus on safety protocols, regulatory compliance, and customer service excellence."
     },
     {
       id: 2,
@@ -23,7 +25,8 @@ export default function Dashboard({ onLogout }) {
       lesson: "LESSON 2",
       qualification: "SQA",
       duration: "2-30hr",
-      progress: 60
+      progress: 60,
+      desc: "The Level 5 SQA Professional Taxi & Private Hire Driver Role course provides advanced comprehensive knowledge for experienced drivers seeking to excel in the passenger transport sector, covering sophisticated customer care strategies, advanced safety protocols, and detailed industry regulations."
     },
     {
       id: 3,
@@ -31,7 +34,8 @@ export default function Dashboard({ onLogout }) {
       lesson: "LESSON 3",
       qualification: "ICQ",
       duration: "2-30hr",
-      progress: 40
+      progress: 40,
+      desc: "This comprehensive iCQ BTEC Level 2 course provides an essential introduction to the professional standards and responsibilities required in the taxi and private hire industry across the United Kingdom."
     }
   ]
 
@@ -40,16 +44,16 @@ export default function Dashboard({ onLogout }) {
       id: 1,
       name: "Lesson 1",
       date: "25/2/2023",
-      category: "QUALIFI",
-      title: "Level 5 Certificate In Aesthetics...",
+      category: "SQA",
+      title: "Level 2 SQA: Professional Taxi & Private Hire Driver (Wales)",
       status: "COMPLETE"
     },
     {
       id: 2,
       name: "Lesson 2", 
       date: "25/2/2023",
-      category: "SEA",
-      title: "Level 5 Certificate In Aesthetics...",
+      category: "ICQ",
+      title: "BTEC Level 2 ICQ: Professional Taxi and Private Hire (Sheffield)",
       status: "INCOMPLETE"
     }
   ]
@@ -79,8 +83,19 @@ export default function Dashboard({ onLogout }) {
     setCurrentView('results')
   }
 
+  // Handle course detail navigation
+  const handleCourseClick = (courseId) => {
+    setCurrentView(`course-${courseId}`)
+  }
+
   // Render main content based on current view
   const renderMainContent = () => {
+    // Handle course detail views
+    if (currentView.startsWith('course-')) {
+      const courseId = parseInt(currentView.split('-')[1])
+      return <CourseDetail courseId={courseId} onBack={handleBackToDashboard} />
+    }
+
     switch(currentView) {
       case 'courses':
         return <Courses onBack={handleBackToDashboard} />
@@ -96,8 +111,8 @@ export default function Dashboard({ onLogout }) {
             <p>Select a course to take a test:</p>
             <div style={{ display: 'grid', gap: '1rem', marginTop: '1rem' }}>
               <div style={{ padding: '1rem', background: '#fff', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                <h3>Level 5 Certificate In Aesthetics Practice - Lesson 1</h3>
-                <p>Test your knowledge on the fundamentals of aesthetics practice.</p>
+                <h3>Level 2 SQA: Professional Taxi & Private Hire Driver (Wales) - Lesson 1</h3>
+                <p>Test your knowledge on professional taxi driving standards and regulations.</p>
                 <button className="sky-btn-primary">Take Test</button>
               </div>
             </div>
@@ -113,7 +128,7 @@ export default function Dashboard({ onLogout }) {
             <p>Your test results and achievements:</p>
             <div style={{ display: 'grid', gap: '1rem', marginTop: '1rem' }}>
               <div style={{ padding: '1rem', background: '#fff', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                <h3>Level 5 Certificate In Aesthetics Practice - Lesson 1</h3>
+                <h3>Level 5 SQA: Professional Taxi & Private Hire Driver Role (Scotland) - Lesson 1</h3>
                 <p>Score: 85% - Passed ✅</p>
                 <p>Completed on: March 15, 2024</p>
               </div>
@@ -218,11 +233,16 @@ export default function Dashboard({ onLogout }) {
 
                 <div className="sky-courses-grid">
                   {courses.map((course) => (
-                    <div key={course.id} className="sky-course-card">
+                    <div 
+                      key={course.id} 
+                      className="sky-course-card"
+                      onClick={() => handleCourseClick(course.id)}
+                      style={{ cursor: 'pointer' }}
+                    >
                       <div className="sky-course-image">
                         <img src={
-                          course.id === 1 ? "https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?w=400&h=300&fit=crop" :
-                          course.id === 2 ? "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop" :
+                          course.id === 1 ? "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop" :
+                          course.id === 2 ? "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" :
                           "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=300&fit=crop"
                         } alt={course.title} className="sky-course-img" />
                         <div className="sky-course-badge">
@@ -320,8 +340,8 @@ export default function Dashboard({ onLogout }) {
                   </svg>
                 </div>
                 <div className="sky-completed-info">
-                  <h4>Level 5 Certificate In Aesthetics Practice</h4>
-                  <p>QUALIFI</p>
+                  <h4>Level 5 SQA: Professional Taxi & Private Hire Driver Role (Scotland)</h4>
+                  <p>SQA</p>
                 </div>
                 <span className="sky-completed-score">100</span>
               </div>

@@ -551,8 +551,8 @@
 
 /* Different colors for different qualifications */
 .sky-course-card:nth-child(1) .sky-course-qualification {
-  color: #2563eb;
-  background: #eff6ff;
+  color: #dc2626;
+  background: #fef2f2;
 }
 
 .sky-course-card:nth-child(2) .sky-course-qualification {
@@ -701,14 +701,14 @@
   display: inline-block;
 }
 
-.sky-mentor-badge.qualifi {
-  color: #2563eb;
-  background: #eff6ff;
+.sky-mentor-badge.sqa {
+  color: #dc2626;
+  background: #fef2f2;
 }
 
-.sky-mentor-badge.sea {
-  color: #d97706;
-  background: #fef3c7;
+.sky-mentor-badge.icq {
+  color: #16a34a;
+  background: #f0fdf4;
 }
 
 .sky-mentor-title {

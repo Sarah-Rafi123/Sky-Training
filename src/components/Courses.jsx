@@ -6,7 +6,7 @@ export default function Courses({ onBack }) {
   const [activeCategory, setActiveCategory] = useState("ALL")
   const [startIndex, setStartIndex] = useState(0)
 
-  const categories = ["ALL", "SEG", "VTCT", "PERSONS", "PRO QUAL", "SQA", "ICQ"]
+  const categories = ["ALL", "SQA", "ICQ"]
   
   // Get courses based on selected category
   const courses = courseData[activeCategory] || []
