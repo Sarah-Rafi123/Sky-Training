@@ -234,6 +234,84 @@
   color: #374151;
 }
 
+/* Text Content Specific Styles */
+.page-text-content {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.page-text-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+  line-height: 1.2;
+}
+
+.page-text-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 2rem 0 1rem 0;
+  line-height: 1.3;
+  color: #dc2626;
+}
+
+.page-text-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 1.5rem 0 1rem 0;
+  line-height: 1.3;
+  color: #2563eb;
+}
+
+.page-text-content p {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.page-text-content ul, 
+.page-text-content ol {
+  margin: 1.25rem 0;
+  padding-left: 2rem;
+}
+
+.page-text-content li {
+  margin-bottom: 0.75rem;
+  text-align: justify;
+}
+
+.page-text-content strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.page-text-content blockquote {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  background: #f8fafc;
+  border-left: 4px solid #3b82f6;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: italic;
+  color: #475569;
+}
+
+.page-text-content code {
+  background: #f1f5f9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+  color: #dc2626;
+}
+
 /* Page Image Styles */
 .page-image-container {
   display: flex;

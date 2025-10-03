@@ -1,5 +1,6 @@
 // Level 5 SQA: Professional Taxi & Private Hire Driver Role (Scotland) Course Data
 // Based on actual course1 folder structure with 9 units
+import { getUnitTextPages } from './textContent.js';
 
 export const courseUnits = [
   {
@@ -85,11 +86,21 @@ export const courseUnits = [
   }
 ];
 
-// Generate unit content based on actual JPG files
+// Generate unit content using extracted text content
 export const generateUnitContent = (unitId) => {
   const unit = courseUnits.find(u => u.id === unitId);
   if (!unit) return [];
   
+  // Try to get text content first
+  const textPages = getUnitTextPages(unitId);
+  if (textPages && textPages.length > 0) {
+    return textPages.map(page => ({
+      ...page,
+      isImage: false
+    }));
+  }
+  
+  // Fallback to image-based content for units without text extraction yet
   const pages = [];
   for (let i = 1; i <= unit.pages; i++) {
     pages.push({
@@ -103,7 +114,7 @@ export const generateUnitContent = (unitId) => {
   return pages;
 };
 
-// Helper function to get all page images for a unit
+// Helper function to get all pages for a unit (now returns text or images)
 export const getUnitPages = (unitId) => {
   return generateUnitContent(unitId);
 };

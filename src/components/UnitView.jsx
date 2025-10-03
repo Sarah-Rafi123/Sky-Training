@@ -121,7 +121,9 @@ export default function UnitView({ unitId, onBack, onBackToCourse }) {
                 </div>
               </div>
             ) : (
-              <div dangerouslySetInnerHTML={{ __html: currentPageContent.content }} />
+              <div className="page-text-content">
+                <div dangerouslySetInnerHTML={{ __html: currentPageContent.content }} />
+              </div>
             )}
           </div>
           
